@@ -12,16 +12,16 @@
 
 ## 技術
 
-  ***フロント***
+### フロント
   * ionic
   * Angular2
   * TypeScript
   * HTML
   * CSS
 
-  ***バックエンド***
+### バックエンド
   * IBM MobileFirst
-  
-  ***データベース***
+
+### データベース
   * MySQL
   * FireBase (今後導入するつもり)
