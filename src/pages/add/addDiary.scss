@@ -1,0 +1,95 @@
+page-addDiary {
+ion-icon {
+        font-size: 2em;
+    }
+
+.label-md {
+    margin: 0px;
+}
+
+//ion-item を初期化
+.item-md {
+    padding-left: 0px;
+   
+}
+
+//input text を初期化
+.text-input-md {
+    margin: 0px;
+}
+
+
+//日記表紙
+#top_info {
+    width: 100%;
+}
+#top_img {
+     margin-top: 1em; 
+    margin-left: 0.8em; 
+    margin-right: 0.8em;
+    width: 38%;
+  float: left;
+}
+
+#top_button {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 100%;
+
+}
+#top_content {
+    width: 56%;
+    float: right;
+  
+}
+
+//日記詳細
+.episode_info {
+    width: 100%;
+}
+.episode_img {
+     margin-top: 1em; 
+    margin-left: 0.8em; 
+    margin-right: 0.8em;
+    width: 38%;
+  float: left;
+}
+
+.episode_button {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 100%;
+
+}
+.episode_content {
+    width: 56%;
+    float: right;
+  
+}
+
+.episode_icon {
+    font-size: 1.5em;
+    margin-right: 0.2em; 
+}
+
+.add-button {
+    width: 93.5%;
+    height: 2.2em;
+    margin-bottom: 0.5em; 
+   margin-left: 0.8em; 
+    margin-right: 0.8em;
+   // margin-right: auto; 
+}
+
+.top_img {
+    width: 100%;
+    height: 17em;
+  object-fit: cover;
+}
+.input {
+    margin-left: 0.5em;
+}
+
+}

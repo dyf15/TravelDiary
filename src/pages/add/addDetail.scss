@@ -1,0 +1,89 @@
+page-addDetail {
+  ion-label {
+	font-size: 0.8em;
+	padding-left: 0.1em; 
+}
+
+.left_content {
+	//padding: 1em;
+	width: 45%;
+	float: left;
+}
+
+.detail_img {
+ 	width: 96%;
+	 margin: 0.4em;
+
+// 	object-fit: contain;
+ }
+.right_content {
+	width: 55%;
+	float: right;
+	//padding-left: 0.4em;
+}
+.del_btn {
+	width: 96%;
+	height: 2em;
+	margin: 0.4em;
+	margin-top: 0.6em;
+	//margin-bottom: -0.5em;
+
+}
+
+.icon_time {
+	//margin-top: 1.5em;
+	 
+	font-size: 2em;
+}
+.datetime {
+	font-size: 1em;
+	margin-right: 4em;
+	margin-left: 0em;
+	//padding-left:- 5.2em; 
+}
+
+.icon_pin {
+	font-size: 2em;
+	margin-left: 0.1em;
+	//margin-right: 0.7em;
+}
+
+.right_content span {
+	font-size: 1.15em;
+	color: #A9A9A9;
+	
+}
+
+.icon_content {
+	margin-bottom: 1em;
+	
+}
+.tag_btn {
+	height: 4em;
+}
+
+.tag_text {
+	font-size: 1.15em;
+	color: #A9A9A9;
+}
+
+.spot_text {
+	padding: 0;
+}
+
+.input-ios .text-input {
+	padding: 0;
+}
+
+.text-input-ios {
+	margin: 0;
+}
+
+
+ion-textarea {
+	height: 5em;
+	margin-top: 0.5em; 
+}
+
+
+}

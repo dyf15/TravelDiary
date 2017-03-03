@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="openChatPage()">
+     <ion-icon ios="ios-text-outline" md="md-text"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Travel Diary</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openSearchPage()">
+       <ion-icon ios="ios-search" md="md-search" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <!-- <button ion-button (click)="test()">テスト</button>-->
+  <ion-refresher (ionRefresh)="refresh($event)">
+    <ion-refresher-content closeDuration="300" pullingIcon="arrow-down" pullingText="Pull to Refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <div *ngIf="itemCount > 0 && items.length >= itemCount">
+      <div class="showDiary" *ngFor="let item of items | orderBy" (click)="goToDiaryDetailPage(item.body)">
+
+        <div class="bg-all">
+          <img class="bg-img" src="{{item.body.diary_img}}">
+
+          <div class="bg-diary-info">
+            <p class="main_tag">{{item.body.tag_name}}</p>
+            <p class="title">{{item.body.title}}</p>
+            <p class="comment">{{item.body.comment}}</p>
+          </div>
+
+          <div class="bg-user-info">
+            <div class="user-info">
+
+              <div class="user-img">
+                <ion-avatar>
+                  <img class="user_img" src="{{item.body.user_img}}">
+                </ion-avatar>
+              </div>
+              <div class="user-name"><span>{{item.body.user_name}}</span></div>
+            </div>
+            <div class="diary-info">
+
+              <ion-icon class="like" ios="ios-heart-outline" md="md-heart-outline"><span>{{item.body.fav_num}}</span></ion-icon>
+              <ion-icon class="message" ios="ios-text-outline" md="md-text"><span>{{item.body.comment_num}}</span></ion-icon>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+     <div class="showDiary" (click)="goToDiaryDetailPage()">
+      <div class="bg-all">
+        <img class="bg-img" src="assets/images/hokai.png">
+
+        <div class="bg-diary-info">
+          <p class="main_tag">MainTag（絶景）</p>
+          <p class="title">title（初旅）</p>
+          <p class="comment">comment（景色がすごく綺麗だった）</p>
+        </div>
+
+        <div class="bg-user-info">
+          <div class="user-info">
+
+            <div class="user-img">
+              <ion-avatar>
+                <img class="user_img" src="assets/images/img.jpg">
+              </ion-avatar>
+            </div>
+            <div class="user-name">name</div>
+            <div class="diary-info">
+
+              <ion-icon class="like" ios="ios-heart-outline" md="md-heart-outline"><span>4</span></ion-icon>
+              <ion-icon class="message" ios="ios-text-outline" md="md-text"><span>4</span></ion-icon>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>-->
+  </ion-list>
+</ion-content>

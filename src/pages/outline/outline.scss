@@ -1,0 +1,25 @@
+page-outline {
+     ion-icon {
+        font-size: 3em;
+        margin-right: 0.3em;
+        color: #FFFFFF;
+    }
+    
+    .outline-all {
+        margin-top: 2em;
+    }
+
+    .outline-user-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .outline-user-info .user_img{
+        border-radius: 50%;
+        width: 3.5em;
+        height: 3.5em;
+        object-fit: cover;//外接リサイズ
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

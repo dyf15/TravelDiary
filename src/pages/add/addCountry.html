@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      旅先
+    </ion-title>
+
+    <!--<ion-buttons end>
+       <button ion-button (click)="addCountryID()">
+      <ion-icon ios="ios-add-outline" md="md-add"></ion-icon>
+       </button>
+     </ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar placeholder="国名を検索" (ionInput)="getItems($event)"></ion-searchbar>
+
+
+  <ion-list radio-group>
+    <!-- <ion-item *ngFor="let item of countrys">
+    <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox></ion-checkbox>
+      
+    </ion-item>-->
+
+
+
+
+    <ion-item *ngFor="let item of countrys">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-radio value="{{item.id}}" (click)="choiceCountryID(item)"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

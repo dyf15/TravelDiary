@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Licensed Materials - Property of IBM
+	5725-I43 (C) Copyright IBM Corp. 2011, 2016. All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or
+	disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<mfp:adapter name="sqlAdapter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mfp="http://www.ibm.com/mfp/integration"
+	xmlns:sql="http://www.ibm.com/mfp/integration/sql">
+
+	<displayName>sqlAdapter</displayName>
+	<description>sqlAdapter</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<!-- Example for using a JNDI data source, replace with actual data source name -->
+			<!-- <dataSourceJNDIName>java:/data-source-jndi-name</dataSourceJNDIName> -->
+			
+			<!-- Example for using MySQL connector, do not forget to put the MySQL connector library in the project's lib folder -->
+			<dataSourceDefinition>
+				<driverClass>com.mysql.jdbc.Driver</driverClass>
+				<url>jdbc:mysql://localhost:3306/TravelDiary</url>
+				<user>root</user>
+				<password></password>
+			</dataSourceDefinition>
+		</connectionPolicy>
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures -->
+	<procedure name="getDiaryDetailInfo"/>
+	<procedure name="getUserInfo"/>
+	<procedure name="getUserAddDiaryList"/>
+	<procedure name="getCountryList"/>
+	<procedure name="getTagList"/>
+	<procedure name="addNewDiary"/>
+	<procedure name="getMaxDiaryID"/>
+	<procedure name="getDiary"/>
+	<procedure name="getDiaryID"/>
+	<procedure name="getDiaryDetailID"/>
+	<procedure name="selFav"/>
+	<procedure name="delFav"/>
+	<procedure name="setFav"/>
+	<procedure name="getUserFavDetailID"/>
+	<procedure name="getUserFavDetailInfo"/>
+	<procedure name="getDetailInfoFag"/>
+	<procedure name="delDiary"/>
+	<procedure name="unprotected" secured="false"/>
+
+</mfp:adapter>

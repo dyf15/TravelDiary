@@ -1,0 +1,323 @@
+page-diaryDetail {
+ .effect-all {
+  position: relative;
+  float: left;
+  overflow: hidden;
+//  margin: 10px 1%;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  //background-color: #000000;
+}
+.effect-all img {
+  width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;//
+}
+.effect-all:after,
+.effect-all .effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.effect-all:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+}
+
+//文字
+.effect-all .effect {
+  z-index: 1;
+  top: 23em;
+    left: 1.5em;
+  right: 1.5em;
+
+}
+
+//エフェクト
+.effect-all:after {
+  opacity: 1;
+  position: absolute;
+  top: 23em;
+
+}
+
+//デフォルト表示する
+  .effect-all p{
+         max-width: 100%;
+        overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+color: #ffffff;
+ 
+
+    }
+
+    .line {
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .effect-all ion-icon {
+      font-size: 1.8em; 
+      margin-right: 0.3em;
+    }
+.set-fav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+    //ボタン
+.set-fav .set_fav_bt {
+
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  background-color: #07090c;
+  color: #ffffff;
+  display: inline-block;
+}
+
+ .set-fav .set_fav_bt {
+   
+   margin-top: 25em;
+   margin-right: 0.5em;
+margin-left: 18em;
+  padding: 0.5em 1em;
+   border: 2px solid #ffffff;
+  font-size: 0.8em;
+  text-decoration: none;
+  background-color: #07090c;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.set-fav ion-icon {
+margin-right: 0.4em;
+ font-size: 1.5em;
+}
+
+.count-info {
+ position: absolute;
+  top: 2em;
+  bottom: 0;
+  left: 15em;
+  right: 0;
+  
+}
+.count-info span {
+  margin-left: 0.4em;
+  font-size: 0.8em;
+}
+.count-info ion-icon {
+  font-size: 1.7em;
+  margin-right: 0.7em;
+}
+
+// count-info
+// .detail_like {
+// //margin-right: 0.5em;
+// //margin-left: 3em;
+//  font-size: 1.7em;
+// }
+
+// .detail_com {
+//  // float: right;
+//   font-size: 1.7em;
+  
+// }
+  //日記に表示するすべて
+    .bg-all {
+      position: relative;   
+  float: left;
+  overflow: hidden;
+//  margin: 10px 1%;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  
+
+ 
+  
+  //background-color: #000000;
+}
+
+
+//旅行日記に表示する表紙
+.bg-all .bg-img {
+width: 100%;
+ 
+}
+
+//tag.title.comment
+.bg-all .bg-diary-info{
+    position: absolute;
+   // margin-left: 1.5em;  
+  top: 2em;
+  bottom: 0;
+  left: 1.5em;
+  right: 0;
+}
+
+//user_img,like,comment
+.bg-all .bg-user-info
+{
+    position: absolute;
+     width: 100%;
+  top: 25em;
+  bottom: 0em;
+  left: 1.5em;
+  right: 0;
+}
+
+//tag.title.comment 
+.bg-all p {
+    color: #ffffff; //set font color
+    margin-bottom: 1.8em;
+}
+
+.bg-diary-info .main_tag {
+    font-size: 1.7em; //set tag font size 
+}
+
+.bg-diary-info .title {
+     font-size: 1.2em; //set title font size
+
+}
+
+.bg-diary-info .comment {
+ font-size: 1em; //set comment font size
+}
+
+
+
+ .bg-user-info .user_img {
+       border-radius: 50%;
+         
+    width: 3em;
+      height: 3em;
+    
+     object-fit: cover;//外接リサイズ
+    }
+
+//user_img like comment
+.user-info {
+    position:relative;
+    width: 50%;
+    float: left;
+}
+
+.user-info .user-img,
+ .user-info .user-name{
+//margin-left: 4em;
+position:absolute;
+  
+}
+
+.user-info .user-name {
+    left: 3.5em;
+    top: 1em;
+}
+
+.user-info .user-name span {
+    margin-left: 1em;
+    font-size: 1.3em;
+}
+//like.comment
+.diary-info {
+   // float: right;
+    float: right;
+     position:relative;
+     padding-right: 1.3em;
+   // margin-right: 1.5em;
+}
+
+//
+.diary-info ion-icon {
+   margin-top: 0.2em;
+    margin-right: 1em;
+     font-size: 1.7em;
+}
+
+.diary-info span {
+    margin-left: 0.3em; 
+    font-size: 0.65em;
+}
+.user-name {
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top_effect-all {
+  position: relative;
+  float: left;
+  overflow: hidden;
+//  margin: 10px 1%;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  //background-color: #000000;
+}
+.top_effect-all img {
+  width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;//
+}
+.top_effect-all:after,
+.top_effect-all .top_effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.top_effect-all:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+}
+
+//文字
+.top_effect-all .top_effect {
+  z-index: 1;
+  top: 29.3em;
+    left: 1.5em;
+  right: 1.5em;
+
+}
+
+//エフェクト
+.top_effect-all:after {
+  opacity: 1;
+  position: absolute;
+  top: 28.7em;
+
+}
+}

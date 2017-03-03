@@ -1,0 +1,138 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title> {{diary_info.title}}</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="popoverOnClick($event)">
+    <ion-icon end ios="ios-menu" md="ios-menu" style="color: #ffffff"></ion-icon>
+</button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <!--旅行日記詳細写真-->
+    <!--
+    ionWillChange スライドの変更開始時
+
+-->
+
+    <ion-slides #mySlider (ionWillChange)="onSlideChanged()" [options]="slideOptions">
+
+        <ion-slide>
+            <div class="bg-all">
+                <div class="top_effect-all">
+
+                    <img src="{{diary_info.diary_img}}">
+
+                    <div class="bg-diary-info">
+                        <p class="main_tag">{{diary_info.tag_name}}</p>
+                        <p class="title">{{diary_info.title}}</p>
+                        <p class="comment">{{diary_info.comment}}</p>
+                    </div>
+
+
+
+
+                    <div class="bg-user-info">
+                        <div class="user-info">
+
+                            <div class="user-img">
+                                <ion-avatar>
+                                    <img class="user_img" src="{{diary_info.user_img}}">
+                                </ion-avatar>
+                            </div>
+                            <div class="user-name">{{diary_info.user_name}}</div>
+                        </div>
+                        <div class="diary-info">
+
+                            <ion-icon class="like" ios="ios-heart-outline" md="md-heart-outline"><span>{{diary_info.fav_num}}</span></ion-icon>
+                            <ion-icon class="message" ios="ios-text-outline" md="md-text"><span>{{diary_info.comment_num}}</span></ion-icon>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="top_effect">
+
+                        <span> {{diary_info.introduction}}</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </ion-slide>
+
+
+        <!--  <ion-slide *ngFor="let item of diarysDetails">
+            <div class="effect-all">
+                <img src="{{item.photo}}">
+                <div class="effect">
+                    <p>{{item.spot}}</p>
+                    <p> {{item.comment}}</p>
+                    <p>{{item.count_com_num}}</p>
+                    <p> {{item.count_fav_num}}</p>
+                </div>
+
+
+            </div>
+
+
+
+        </ion-slide>-->
+        <!--<div *ngIf="itemCount > 0 && items.length >= itemCount">-->
+        <ion-slide *ngFor="let item of items">
+            <!-- <ion-slide *ngFor="let item of items | orderBy">-->
+
+            <div class="effect-all">
+                <img src="{{item.body.photo}}">
+                <div class="count-info">
+
+                    <ion-icon class="detail_like" ios="ios-heart-outline" md="md-heart-outline"><span>{{item.body.count_fav_num}}</span></ion-icon>
+                    <ion-icon class="detail_com" ios="ios-text-outline" md="md-text"><span>{{item.body.count_com_num}}</span></ion-icon>
+
+                </div>
+                <div class="set-fav"> <span class="set_fav_bt" (click)="fav(item)" [style.background-color]="item.body.color"><ion-icon ios="ios-heart-outline" md="md-heart-outline"></ion-icon>行ってみたい</span></div>
+                <div class="effect">
+                    <p>
+                        <ion-icon ios="ios-pin-outline" md="md-pin"></ion-icon>
+                        {{item.body.spot}}
+                    </p>
+
+                    <p class="line"></p>
+
+                    <span> {{item.body.comment}}</span>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </ion-slide>
+        <!--</div>-->
+
+    </ion-slides>
+
+
+
+
+</ion-content>
+<!--
+<ion-footer>
+    <ion-toolbar color="dark">
+        <ion-title>{{sliderLength}}</ion-title>
+    </ion-toolbar>
+</ion-footer>-->

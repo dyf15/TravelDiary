@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      エピソード追加
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--
+   <ion-card *ngFor="let item of details">
+      <ion-card-content>
+        <img [src]="item.imagePath" (click)="readPicture(item.imagePath)" />
+      </ion-card-content>
+      <ion-card-content>
+       <ion-list>
+
+  <button ion-item>
+    コメント（表紙に表示）
+  </button>  
+   
+  <button ion-item>
+    旅行地
+  </button>
+    
+</ion-list>
+ 
+      </ion-card-content>
+    </ion-card>
+-->
+
+
+  <ion-list>
+    <ion-card>
+      <div class="left_content">
+        <img class="detail_img" [src]="item.imagePath" (click)="readPicture(item.imagePath)" />
+        <button ion-button class="del_btn">削除</button>
+
+      </div>
+      <div class="right_content">
+        <ion-item>
+          <ion-label>
+            <ion-icon class="icon_time" ios="ios-clock-outline" md="md-clock"></ion-icon>
+          </ion-label>
+          <ion-datetime class="datetime" displayFormat="HH:mm" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon class="icon_pin" ios="ios-pin-outline" md="md-pin"></ion-icon>
+          </ion-label>
+
+          <ion-input type="text" class="spot_text" placeholder="場所"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea rows="4" placeholder="コメント" [(ngModel)]="comment"></ion-textarea>
+        </ion-item>
+        <button class="tag_btn" ion-item (click)="getTagList()">
+	<span >タグ</span>
+  </button>
+      </div>
+    </ion-card>
+
+
+
+
+
+
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab (click)="selectPicture()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+
+</ion-content>

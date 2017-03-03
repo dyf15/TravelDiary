@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      もくじ
+    </ion-title>
+     <ion-buttons end>
+      <button ion-button (click)="close()">
+       <ion-icon ios="ios-close" md="ios-close-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="outline-all">
+        <div class="outline-user-info">
+            <p id="diary_title">日記のタイトル表示</p>
+            <ion-avatar>
+                <img class="user_img" src="assets/images/chat.jpg">
+            </ion-avatar>
+            <p class="user_name">name</p>
+        </div>
+        <div class="outline-diary-info">
+            <ion-list>
+            <ion-item-group>
+                  <ion-item-divider color="light">
+                      <span>1日目　</span>
+                    　<span>2016/01/01</span>
+                　</ion-item-divider>
+                <ion-item (click)="listItemOnClick()">
+                    <ion-thumbnail item-left>
+                        <img src="assets/images/img.jpg">
+                    </ion-thumbnail>
+                    <p>写真撮った時間</p>
+                    <p>東京都</p>
+                    <p>日本</p>
+                </ion-item>
+            
+            </ion-item-group>
+
+
+            <ion-item-group>
+                  <ion-item-divider color="light">
+                      <span>2日目　</span>
+                    　<span>2017/01/01</span>
+                　</ion-item-divider>
+                <ion-item>
+                    <ion-thumbnail item-left>
+                        <img src="assets/images/chat.jpg">
+                    </ion-thumbnail>
+                    <p>写真撮った時間</p>
+                    <p>大阪市</p>
+                    <p>日本</p>
+                </ion-item>
+            
+            </ion-item-group>
+            </ion-list>
+            
+
+        </div>
+        <div class="outline-diary-tag">
+            <ion-list>
+            <ion-item-group>
+                <ion-item-divider color="light">
+                    <p>タグ</p>
+                </ion-item-divider>
+                <ion-item>
+                    <button ion-button round outline>test タグ1</button> 
+                    <button ion-button round outline>test タグ2</button>
+                    <button ion-button round outline>test タグ3</button>  
+                </ion-item>
+            
+            </ion-item-group>
+            </ion-list>
+            
+            
+        </div>
+    </div>
+
+
+</ion-content>

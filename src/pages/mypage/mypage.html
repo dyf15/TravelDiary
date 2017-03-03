@@ -1,0 +1,188 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button>
+        <ion-icon id="chat" ios="ios-text-outline" md="md-text"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>My Page</ion-title>
+    <ion-buttons end>
+      <button ion-button>
+      <!--<ion-icon name="ios-settings-outline"></ion-icon>-->
+   <ion-icon name="settings"></ion-icon>
+      </button>
+      <button ion-button>
+         <ion-icon id="calendar" name="ios-calendar-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!--
+  <ion-navbar>
+
+    <ion-icon id="chat" ios="ios-text-outline" md="md-text"></ion-icon>
+    <ion-title>My Page</ion-title>
+    <ion-icon name="ios-settings-outline"></ion-icon>
+    <ion-icon id="calendar" name="ios-calendar-outline"></ion-icon>
+  </ion-navbar>
+  -->
+</ion-header>
+<ion-content>
+
+
+
+  <div id="user" *ngFor="let item of userinfos">
+    <ion-avatar>
+      <img id="user_img" src="{{item.user_img}}">
+    </ion-avatar>
+
+    <p id="user_name">{{item.name}}</p>
+  </div>
+
+
+  <!--<div id="follow">
+    <span>フォロー</span>
+    <div class="follows">
+      <ion-icon id="follow_icon" name="ios-person-add-outline"></ion-icon>
+      <span id="follow_num">4</span>
+    </div>
+  </div>
+
+  <div id="follower">
+    <span class="follower">フォロワー</span>
+    <div class="follows">
+      <ion-icon id="follower_icon1" name="ios-person-outline"></ion-icon>
+      <ion-icon id="follower_icon2" name="done-all"></ion-icon>
+      <span id="follower_num">4</span>
+    </div>
+  </div>-->
+
+
+  <div padding>
+
+    <ion-segment [(ngModel)]="diary">
+
+      <ion-segment-button value="my_diary" (ionSelect)="getDiaryID()">
+
+        <span class="tab_text">訪ねた国</span>
+      </ion-segment-button>
+
+      <ion-segment-button value="want_go" (ionSelect)="getUserFavDetailID()">
+
+        <span class="tab_text">行ってみたい</span>
+      </ion-segment-button>
+
+      <ion-segment-button value="go">
+
+        <span class="tab_text">行った</span>
+      </ion-segment-button>
+
+
+
+    </ion-segment>
+
+    <div id="diary" [ngSwitch]="diary">
+      <ion-refresher (ionRefresh)="refresh($event)">
+        <ion-refresher-content closeDuration="300">
+        </ion-refresher-content>
+      </ion-refresher>
+      <ion-list *ngSwitchCase="'my_diary'">
+        <!-- <ion-item-sliding>
+
+          <ion-item>
+            <div class="diary_info">
+              <img src="assets/images/img.jpg" />
+              <div class="card-title">São Paulo</div>
+              <div class="card-subtitle">41 Listings</div>
+            </div>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="danger" (click)="delDiaryOnClick()">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+          </ion-item-options>
+
+        </ion-item-sliding>-->
+
+        <div *ngIf="itemCount > 0 && items.length >= itemCount">
+
+          <ion-item-sliding *ngFor="let item of items | orderBy">
+
+            <ion-item>
+              <div class="diary_info">
+                <img src="{{item.body.photo}}" />
+                <div class="card-title">{{item.body.title}}</div>
+                <div class="card-subtitle">{{item.body.count_detail}} Listings</div>
+              </div>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="danger" (click)="delDiaryOnClick(item)">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+            </ion-item-options>
+
+          </ion-item-sliding>
+        </div>
+
+        <!-- <ion-item-sliding>
+        
+          <ion-card>
+            <div class="card_img">
+              <img src="assets/images/img.jpg">
+            </div>
+            <div class="card-title">São Paulo</div>
+            <div class="card-subtitle">41 Listings</div>
+
+          </ion-card>-->
+
+
+        <!-- <ion-item-options side="right">
+      <button ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+    </ion-item-options> 
+        </ion-item-sliding>-->
+        <!--<ion-item>
+        <ion-card>
+          <div class="card_img"><img src="assets/images/chat.jpg" /></div>
+          <div class="card-title">Amsterdam</div>
+          <div class="card-subtitle">64 Listings</div>
+        </ion-card>
+</ion-item>-->
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'want_go'">
+
+
+        <div *ngIf="detailCount > 0 && details.length >= detailCount">
+
+
+
+          <ion-item *ngFor="let detail of details | orderBy">
+            <div class="diary_info">
+              <img src="{{detail.body.photo}}" />
+              <div class="card-title">{{detail.body.spot}}</div>
+
+            </div>
+          </ion-item>
+
+        </div>
+
+
+
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'want_eat'">
+        <ion-item>want eat 1</ion-item>
+        <ion-item>want eat 2</ion-item>
+      </ion-list>
+
+    </div>
+
+  </div>
+</ion-content>

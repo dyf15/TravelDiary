@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="search" id="segment">
+    <ion-segment-button value="country">
+      国
+    </ion-segment-button>
+    <ion-segment-button value="tag">
+      タグ
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="search">
+    <div *ngSwitchCase="'country'">
+      <ion-searchbar placeholder="国名を検索" (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+
+        </ion-item>
+
+      </ion-list>
+
+    </div>
+
+    <div *ngSwitchCase="'tag'">
+      <ion-searchbar placeholder="タグ名を検索" (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item>
+          tag1
+
+        </ion-item>
+        <ion-item>
+          tag2
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+</ion-content>

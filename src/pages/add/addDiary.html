@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      表紙作成
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="DelConfirmAlert()">
+       <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <img class="top_img" [src]="imagePath" (click)="selectPicture()">
+
+    <ion-list>
+      <div class="input">
+
+        <ion-input type="text" placeholder="タイトル(表紙に表示)" [(ngModel)]="title" style="height: 2.7em; font-size: 1.1em; "></ion-input>
+
+        <ion-textarea placeholder="一言(表紙に表示)" [(ngModel)]="comment" style="height: 2.7em; font-size: 1.1em; "></ion-textarea>
+
+        <ion-textarea placeholder="説明文" [(ngModel)]="introduction" style="height: 2.7em;"></ion-textarea>
+        <ion-textarea placeholder="旅行地" [(ngModel)]="spot" style="height: 2.7em; font-size: 1.1em; "></ion-textarea>
+      </div>
+      <button ion-item (click)="getTagList()">
+    <!--メインタグ(表紙に表示) * -->{{tag_name}}
+  </button>
+      <button ion-item (click)="getCountryList()">
+    <!--国-->{{country_name}}
+  </button>
+
+
+
+
+    </ion-list>
+
+
+    <!--<ion-input [(ngModel)]="title" type="text" placeholder="国" (click)="getCountryList()"></ion-input>-->
+
+    <!-- <button ion-item >
+    国
+  </button>-->
+
+
+  </ion-card>
+
+
+
+  <!--
+
+        <button id="top_button" ion-button (click)="selectPicture()">表紙を変更</button>
+   -->
+
+
+  <!--  <button ion-item (click)="openCountryListPage()" style="padding: 0px; margin: 0px; color :#808080;" >
+          国(表紙に表示)
+          </button>
+
+            <ion-input type="text" placeholder="タイトル"></ion-input>
+
+            <ion-input type="text" placeholder="旅の説明文" style="height: 5em; margin-top: 0.3em;"></ion-input>
+
+
+  <button ion-item style="padding: 0px; color :#808080;">メインタグの追加 </button>-->
+
+  <button ion-button [disabled]="disabled_btn" (click)="getMaxDiaryID()" class="add-button">完了</button>
+
+  <!--<button ion-button (click)="show()" class="add-button">show</button>-->
+</ion-content>

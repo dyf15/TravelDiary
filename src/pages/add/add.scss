@@ -1,0 +1,158 @@
+page-add {
+
+	
+ion-icon {
+        font-size: 2em;
+    }
+
+#title {
+	text-align: center;
+	margin-top: 1.3em;
+	font-size: 1.2em;
+}
+.label-md {
+    margin: 0px;
+}
+
+//ion-item を初期化
+.item-md {
+    padding-left: 0px;
+   
+}
+
+//input text を初期化
+.text-input-md {
+    margin: 0px;
+}
+
+
+//日記表紙
+#top_info {
+    width: 100%;
+}
+#top_img {
+     margin-top: 1em; 
+    margin-left: 0.8em; 
+    margin-right: 0.8em;
+    width: 38%;
+  float: left;
+}
+
+#top_button {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 100%;
+
+}
+#top_content {
+    width: 56%;
+    float: right;
+  
+}
+
+//日記詳細
+.episode_info {
+    width: 100%;
+}
+.episode_img {
+     margin-top: 1em; 
+    margin-left: 0.8em; 
+    margin-right: 0.8em;
+    width: 38%;
+  float: left;
+}
+
+.episode_button {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 100%;
+
+}
+.episode_content {
+    width: 56%;
+    float: right;
+  
+}
+
+.episode_icon {
+    font-size: 1.5em;
+    margin-right: 0.2em; 
+}
+
+.add-button {
+    width: 93.5%;
+    height: 2.2em;
+    margin-bottom: 0.5em; 
+   margin-left: 0.8em; 
+    margin-right: 0.8em;
+   // margin-right: auto; 
+}
+
+.cbp_tmtimeline {
+	margin: 3em 3em 0 1em;
+	padding: 0;
+	list-style: none;
+	position: relative;
+} 
+
+/* The line */
+.cbp_tmtimeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 0.5em;
+	background: #afdcf8;
+	left: 20%;
+	margin-left: -1.7em;
+}
+
+.cbp_tmtimeline > li {
+	position: relative;
+}
+.cbp_tmtimeline > li .cbp_tmlabel {
+	margin: 0 0 3em 25%;
+	//background: #3594cb;
+	//color: #fff;
+	//padding: 0.5em;
+	
+    font-size: 1em;
+	font-weight: 500;
+	line-height: 3.5;
+	position: relative;
+	border-radius: 5px;
+}
+.cbp_tmtimeline > li .cbp_tmicon {
+	width: 0.5em; //タイムライン丸の大きさ
+	height: 0.5em;
+	font-family: 'ecoico';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	font-size: 1.4em;
+	//line-height: 40px;
+//	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	color: #fff;
+	background: #46a4da;
+	border-radius: 50%;
+	box-shadow: 0 0 0 8px #afdcf8;
+	text-align: center;
+	left: 20%;
+	top: 0;
+	margin: 0 0 0 -25px;
+}
+
+.btn {
+	width: 12em;
+	height: 2.5em;
+	text-align: center;
+	 margin-left: 4.5em;
+	// margin-right: auto;
+}
+
+}

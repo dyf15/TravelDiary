@@ -1,0 +1,72 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+
+<button ion-button (click)="addDiaryImg()">開始</button>
+</ion-content>
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      新規旅行日記
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2 id="title">あなたの思い出を日記で記録しましょう！</h2>
+  <ul class="cbp_tmtimeline">
+    <li>
+
+      <div class="cbp_tmicon"></div>
+      <div class="cbp_tmlabel">
+        <h3>step1 </h3>
+        <p>日記表紙の写真を選びましょう</p>
+      </div>
+    </li>
+    <li>
+
+      <div class="cbp_tmicon"></div>
+      <div class="cbp_tmlabel">
+        <h3>step2</h3>
+        <p>写真とその思い出を書きましよう</p>
+      </div>
+    </li>
+    <li>
+
+      <div class="cbp_tmicon"></div>
+      <div class="cbp_tmlabel">
+        <h3>step3</h3>
+        <p>日記を完成し、公開しましよう</p>
+      </div>
+    </li>
+
+  </ul>
+
+  <button ion-button class="btn" (click)="selectPicture()">さっそく日記を登録する</button>
+  <!--  <ion-card *ngFor="let item of items">
+      <ion-card-content>
+        <img [src]="item.imagePath" (click)="readPicture(item.imagePath)" />
+      </ion-card-content>
+      <ion-card-content>
+        {{item.exif}}
+      </ion-card-content>
+    </ion-card>
+    <ion-fab bottom right>
+      <button ion-fab (click)="selectPicture()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>
+
+<div class="modal overlay" (click)="removePicture()" *ngIf="base64Image">
+  <img [src]="base64Image" />
+</div>-->
+</ion-content>

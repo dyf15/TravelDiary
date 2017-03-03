@@ -1,0 +1,86 @@
+<ion-header class="chat" ng-controller="MainCtrl">
+
+
+  <ion-navbar>
+    <button ng-click="openFriendList()" menuToggle>
+    
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      チャット
+    </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content class="chat">
+
+  <button ion-button color="secondary" (click)="connect($event)"> CONNECT </button>
+
+  <button ion-button color="danger" (click)="getUsers($event)"> getUsers </button>
+
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let item of countrys">
+      <ion-item>
+        <ion-avatar item-left>
+          <img id="chat_img" src="assets/images/chat.jpg">
+        </ion-avatar>
+        <h2> {{item.id}}</h2>
+
+        <p>{{item.name}}</p>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-left>
+          <img id="chat_img" src="assets/images/chat.jpg">
+        </ion-avatar>
+        <h2>Tom</h2>
+        <p>test1,test1,test1</p>
+      </ion-item>
+
+
+      <ion-item-options side="right">
+        <button ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-left>
+          <img id="chat_img" src="assets/images/chat.jpg">
+        </ion-avatar>
+        <h2>Tom</h2>
+        <p>test2,test2,test2</p>
+      </ion-item>
+
+
+      <ion-item-options side="right">
+        <button ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        削除
+      </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+
+  </ion-list>
+
+</ion-content>

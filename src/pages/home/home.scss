@@ -1,0 +1,135 @@
+
+page-home {
+    
+    //アイコンの大きさ設定
+   ion-icon {
+        font-size: 2em;
+    }
+
+   
+
+  //日記に表示するすべて
+    .bg-all {
+      position: relative;   
+  float: left;
+  overflow: hidden;
+//  margin: 10px 1%;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  
+  
+  //background-color: #000000;
+}
+
+
+//旅行日記に表示する表紙
+.bg-all .bg-img {
+width: 100%;
+ height: 39.5em;
+ object-fit: cover;
+}
+
+//tag.title.comment
+.bg-all .bg-diary-info{
+    position: absolute;
+   // margin-left: 1.5em;  
+  top: 4em;
+  bottom: 0;
+  left: 1.5em;
+  right: 0;
+}
+
+//user_img,like,comment
+.bg-all .bg-user-info
+{
+    position: absolute;
+     width: 100%;
+  top: 32em;
+  bottom: 0em;
+  left: 1.5em;
+  right: 0;
+}
+
+//tag.title.comment 
+.bg-all p {
+    color: #ffffff; //set font color
+    margin-bottom: 1.8em;
+}
+
+.bg-diary-info .main_tag {
+    font-size: 1.9em; //set tag font size 
+}
+
+.bg-diary-info .title {
+     font-size: 1.4em; //set title font size
+
+}
+
+.bg-diary-info .comment {
+ font-size: 1.2em; //set comment font size
+}
+
+
+ .bg-user-info .user_img {
+       border-radius: 50%;
+         
+    width: 3.5em;
+      height: 3.5em;
+    
+     object-fit: cover;//外接リサイズ
+    }
+
+//user_img like comment
+.user-info {
+    position:relative;
+    width: 50%;
+    float: left;
+    
+}
+
+.user-info .user-img,
+ .user-info .user-name{
+//margin-left: 4em;
+position:absolute;
+  
+}
+
+.user-info .user-name {
+    left: 4em;
+    top: 1em;
+}
+.user-info .user-name span {
+    margin-left: 1em;
+    font-size: 1.3em;
+}
+//like.comment
+.diary-info {
+    float: right;
+     position:relative;
+   // width: 100%;
+//right: 1.5em;
+    // margin-left: 3em;
+    padding-right: 1.5em;
+}
+
+//
+.diary-info ion-icon {
+   margin-top: 0.2em;
+    margin-right: 1em;
+     font-size: 1.7em;
+}
+
+.diary-info span {
+    margin-left: 0.3em; 
+   font-size: 0.7em;
+  
+}
+
+.user-name {
+    font-size: 0.8em;
+}
+   
+
+
+}
