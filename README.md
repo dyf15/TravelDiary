@@ -10,6 +10,9 @@
 ## 対応するモバイル端末OS
   iOS、Android、WindowsPhone 
 
+## アプリイメージ
+
+
 ## 技術
 
 ### フロント
